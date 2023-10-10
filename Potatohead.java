@@ -8,6 +8,7 @@ public class Potatohead
 	private int eyeNumber;
 	
 	// STEP 1 OF 5: add one instance variable HERE
+	private int earNumber;
 	
   
 	/*  the no argument constructor  */
@@ -18,6 +19,7 @@ public class Potatohead
 		/* Do NOT set Objects to null */
 		eyeNumber = 2;
     // STEP 2 OF 5: initialize your instance variable HERE
+		earNumber = 2;
 
 	}
   
@@ -36,8 +38,13 @@ public class Potatohead
 	*/	
 	}
 	public void setNumOfEyes(int _numOfEyes)
-  {
+  	{
 		eyeNumber = _numOfEyes;
+	}
+
+	public void setNumOfEars(int _numOfEars) 
+	{
+		earNumber = _numOfEars;
 	}
 		
 	/**
@@ -46,8 +53,13 @@ public class Potatohead
 		@return eyeNumber an int describing the number of eyes.
 	*/
 	public int getNumOfEyes()
-  {
+  	{
 		return eyeNumber;
+	}
+
+	public int getNumOfEars() 
+	{
+		return earNumber;
 	}
 	
 
@@ -57,6 +69,7 @@ public class Potatohead
 		String output = "PotatoHead object. ";
 		output += "Number Of Eyes: " + eyeNumber + ". ";
     // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
+		output += "Number of Ears: " + earNumber + ". ";
 
 		
 		return output;
