@@ -36,7 +36,7 @@ public class Potatohead {
         eyeNumber = _numOfEyes;
     }
 	
-   /** void setRightHandAccessory(String _accessory)
+    /** void setRightHandAccessory(String _accessory)
      * sets what the potatohead is holding in ITS right hand.
      * parameters: 
      * @param _accessory for what the user desires
@@ -75,7 +75,7 @@ public class Potatohead {
         return earNumber;
     }
 
-  /**String getRightHandAccessory()
+    /**String getRightHandAccessory()
     * Gets what the potatohead is holding in ITS right hand
     * @return a String of an accessory
     */
