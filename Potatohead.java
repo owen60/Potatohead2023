@@ -8,6 +8,8 @@ public class Potatohead {
     // STEP 1 OF 5: add one instance variable HERE
     private int earNumber;
 
+    private boolean hasGlasses;
+
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -17,7 +19,7 @@ public class Potatohead {
         eyeNumber = 2;
         // STEP 2 OF 5: initialize your instance variable HERE
         earNumber = 2;
-
+        hasGlasses = false;
     }
 
 
@@ -43,7 +45,14 @@ public class Potatohead {
     public void setNumOfEars(int _numOfEars) {
         earNumber = _numOfEars;
     }
-    
+    /**
+		void setGlasses(boolean changeGlasses)
+  		mutator method for hasGlasses
+		@param changeGlasses changes the value of the boolean to true or false 
+  	*/
+    public void setGlasses(boolean changeGlasses){
+	    hasGlasses = changeGlasses;
+    }
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
@@ -55,7 +64,7 @@ public class Potatohead {
     public int getNumOfEyes() {
         return eyeNumber;
     }
-
+    
     /**
     	String getNumOfEars()
     	accessor method for earNumber
@@ -64,7 +73,15 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
-
+	
+    /**
+    	Boolean hasGlasses()
+    	accessor method for hasGlasses
+    	@return hasGlasses as a boolean for if the potato is wearing glasses
+    */
+    public boolean hasGlasses() {
+	return hasGlasses;
+    }
 
     /**
     	String toString()
@@ -76,7 +93,12 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
-
+	if (hasGlasses == true){
+		output += "Is wearing glasses. ";
+			}
+	if (hasGlasses == false){
+		output += "Isn't wearing glasses";
+	}
 
         return output;
     }
