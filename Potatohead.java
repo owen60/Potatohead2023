@@ -7,7 +7,7 @@ public class Potatohead {
     private int eyeNumber;
     // STEP 1 OF 5: add one instance variable HERE
     private int earNumber;
-
+    private String rHandAccessory
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -17,6 +17,7 @@ public class Potatohead {
         eyeNumber = 2;
         // STEP 2 OF 5: initialize your instance variable HERE
         earNumber = 2;
+	rHandAccessory = "none";
 
     }
 
@@ -34,7 +35,16 @@ public class Potatohead {
     public void setNumOfEyes(int _numOfEyes) {
         eyeNumber = _numOfEyes;
     }
-
+	
+   /** void setRightHandAccessory(String _accessory)
+     * sets what the potatohead is holding in ITS right hand.
+     * parameters: 
+     * @param _accessory for what the user desires
+     */
+    public void setRightHandAccessory(String _accessory){
+	    rHandAccessory = _accessory;
+    }
+	
     /**
 		void setNumOfEars(int _numOfEars)
   		mutator method for earNumber
@@ -65,6 +75,14 @@ public class Potatohead {
         return earNumber;
     }
 
+  /**String getRightHandAccessory()
+    * Gets what the potatohead is holding in ITS right hand
+    * @return a String of an accessory
+    */
+    public String getRightHandAccessory(){
+	    return rHandAccessory;
+    }
+
 
     /**
     	String toString()
@@ -76,6 +94,7 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
+	output += "Holding: " + rHandAccessory + " in right hand.";
 
 
         return output;
