@@ -42,6 +42,11 @@ public class Potatohead
 		eyeNumber = _numOfEyes;
 	}
 
+	/**
+		void setNumOfEars(int _numOfEars)
+  		mutator method for earNumber
+		@param _numOfEars for what the user desires. 
+  	*/
 	public void setNumOfEars(int _numOfEars) 
 	{
 		earNumber = _numOfEars;
@@ -57,6 +62,11 @@ public class Potatohead
 		return eyeNumber;
 	}
 
+	/**
+		String getNumOfEars()
+		accessor method for earNumber
+		@return earNumber an int describing the number of ears.
+	*/
 	public int getNumOfEars() 
 	{
 		return earNumber;
