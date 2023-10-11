@@ -10,6 +10,8 @@ public class Potatohead {
 
     private boolean hasGlasses;
 
+    private String rHandAccessory
+
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -19,7 +21,11 @@ public class Potatohead {
         eyeNumber = 2;
         // STEP 2 OF 5: initialize your instance variable HERE
         earNumber = 2;
+
         hasGlasses = false;
+
+	      rHandAccessory = "none";
+
     }
 
 
@@ -36,19 +42,28 @@ public class Potatohead {
     public void setNumOfEyes(int _numOfEyes) {
         eyeNumber = _numOfEyes;
     }
-
+	
+    /** void setRightHandAccessory(String _accessory)
+     * sets what the potatohead is holding in ITS right hand.
+     * parameters: 
+     * @param _accessory for what the user desires
+     */
+    public void setRightHandAccessory(String _accessory){
+	    rHandAccessory = _accessory;
+    }
+	
     /**
-		void setNumOfEars(int _numOfEars)
+		  void setNumOfEars(int _numOfEars)
   		mutator method for earNumber
-		@param _numOfEars for what the user desires. 
+		  @param _numOfEars for what the user desires. 
   	*/
     public void setNumOfEars(int _numOfEars) {
         earNumber = _numOfEars;
     }
     /**
-		void setGlasses(boolean changeGlasses)
+		  void setGlasses(boolean changeGlasses)
   		mutator method for hasGlasses
-		@param changeGlasses changes the value of the boolean to true or false 
+		  @param changeGlasses changes the value of the boolean to true or false 
   	*/
     public void setGlasses(boolean changeGlasses){
 	    hasGlasses = changeGlasses;
@@ -73,6 +88,7 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
+
 	
     /**
     	Boolean hasGlasses()
@@ -80,8 +96,19 @@ public class Potatohead {
     	@return hasGlasses as a boolean for if the potato is wearing glasses
     */
     public boolean hasGlasses() {
-	return hasGlasses;
+	    return hasGlasses;
     }
+
+
+    /**String getRightHandAccessory()
+    * Gets what the potatohead is holding in ITS right hand
+    * @return a String of an accessory
+    */
+    public String getRightHandAccessory(){
+	    return rHandAccessory;
+    }
+
+
 
     /**
     	String toString()
@@ -93,12 +120,17 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
-	if (hasGlasses == true){
-		output += "Is wearing glasses. ";
-			}
-	if (hasGlasses == false){
-		output += "Isn't wearing glasses";
-	}
+
+        if (hasGlasses == true){
+          output += "Is wearing glasses. ";
+        }
+        if (hasGlasses == false){
+          output += "Isn't wearing glasses";
+        }
+
+        output += "Holding: " + rHandAccessory + " in right hand.";
+
+
 
         return output;
     }
