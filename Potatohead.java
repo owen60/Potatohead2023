@@ -26,7 +26,7 @@ public class Potatohead {
 
         hasGlasses = false;
 
-	      rHandAccessory = "none";
+	rHandAccessory = "none";
 	hasMouth = false;
 
     }
