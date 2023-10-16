@@ -151,6 +151,14 @@ public class Potatohead {
 
         output += "Holding: " + rHandAccessory + " in right hand.";
 
+	if (hasMouth == true){
+          output += "Has a mouth.";
+        }
+	    
+        if (hasMouth == false){
+          output += "Does not have a mouth.";
+        }
+
 
 
         return output;
