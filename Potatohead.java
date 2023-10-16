@@ -14,7 +14,8 @@ public class Potatohead {
 
     private boolean hasMouth;
 
-
+    private int numOfArms;
+	
     /*  the no argument constructor  */
     public Potatohead() {
         /* initialize ***ALL*** instance variables here. */
@@ -80,6 +81,9 @@ public class Potatohead {
     public void setHasMouth(boolean _hasMouth){
 	    hasMouth = _hasMouth;
     }
+    public void setNumOFArms(int _numOfArms){
+	    numOfArms = _numOfarms;
+    }
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
@@ -100,7 +104,9 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
-
+     public int getNumOfArms(){
+	return numOfArms;
+     }
 	
     /**
     	Boolean hasGlasses()
