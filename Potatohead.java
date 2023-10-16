@@ -14,6 +14,7 @@ public class Potatohead {
 
     private boolean hasMouth;
 
+    private int numOfArms;
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -71,12 +72,22 @@ public class Potatohead {
     public void setGlasses(boolean changeGlasses){
 	    hasGlasses = changeGlasses;
     }
+	
+    /**
+    	    void setNumOfArms(int _numOfArms)
+	    mutator method for numOfArms
+	    @param _numOfArms changes the value of numOfArms to any number
+     */
+    public void setNumOfArms(int _numOfArms){
+	    numOfArms = _numOfArms;
+    }
 
      /**
 		  void setHasMouth(boolean _hasMouth)
   		mutator method for hasMouth
 		  @param _hasMouth changes the value of hasMouth to true or false 
   	*/
+
     public void setHasMouth(boolean _hasMouth){
 	    hasMouth = _hasMouth;
     }
@@ -100,7 +111,10 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
-
+    
+    public int getNumOfArms() {
+	return numOfArms;
+    }
 	
     /**
     	Boolean hasGlasses()
