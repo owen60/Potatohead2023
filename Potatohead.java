@@ -5,7 +5,9 @@ public class Potatohead {
 
     /*  PRIVATE instance variables go here  */
     private int eyeNumber;
-    // STEP 1 OF 5: add one instance variable HERE
+    // STEP 1 OF 5: add one instance variable HERE 
+    private boolean hasEars;
+	
     private int earNumber;
 
     private boolean hasGlasses;
@@ -22,8 +24,10 @@ public class Potatohead {
         /* Do NOT set Objects to null */
         eyeNumber = 2;
         // STEP 2 OF 5: initialize your instance variable HERE
+	hasEars = false;
+	    
         earNumber = 2;
-
+ 
         hasGlasses = false;
 
         rHandAccessory = "none";
@@ -36,7 +40,14 @@ public class Potatohead {
 
     // STEP 3 OF 5: Add an accessor method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
-
+	/**
+        void setEars(boolean _setEars)
+	mutator method for hasEars
+        @param _setHasEars for what the user desires
+        */
+    public void setHasEars(boolean _setHasEars){
+	    hasEars = _setHasEars;
+    }
     /**
     	void setNumOfEyes(int _numOfEyes)
     	mutator method for eyeNumber
@@ -82,7 +93,14 @@ public class Potatohead {
     }
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
-
+	/**
+       boolean hasEars()
+       accessor method for hasEars
+       @return hasEars as a boolean to check if the potato head has ears
+        */
+    public boolean hasEars(){
+	    return hasEars;
+    }
     /**
     	String getNumOfEyes()
     	accessor method for eyeNumber
@@ -141,7 +159,12 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
-
+        if (hasEars == true){
+		output += "Has ears. ";
+	}
+        if (hasEars == false){
+		output += "Does not have ears. ";
+	}
         if (hasGlasses == true){
           output += "Is wearing glasses. ";
         }
