@@ -169,6 +169,13 @@ public class Potatohead {
           output += "Isn't wearing glasses";
         }
 
+	if (hasArm == true){
+	  output += "Has Arm";
+	}
+	if (hasArm == false){
+	  output += "Doesn't have arm";
+	}
+
         output += "Holding: " + rHandAccessory + " in right hand.";
 
 
