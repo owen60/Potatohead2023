@@ -29,7 +29,7 @@ public class Potatohead {
 
         rHandAccessory = "none";
         hasMouth = false;
-
+	numOfArms = 0;
     }
 
 
@@ -155,6 +155,7 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
+	output += "Number of arms: " + numOfArms + ". ";
 
         if (hasGlasses == true){
           output += "Is wearing glasses. ";
