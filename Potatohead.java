@@ -10,11 +10,14 @@ public class Potatohead {
 
     private boolean hasGlasses;
 
-    private String rHandAccessory
+    private String rHandAccessory;
 
     private boolean hasMouth;
 
     private boolean hasHat;
+
+    private boolean hasArm;
+
 
 
     /*  the no argument constructor  */
@@ -31,7 +34,10 @@ public class Potatohead {
         rHandAccessory = "none";
         hasMouth = false;
 
-	hasHat = false;
+        hasHat = false;
+
+        hasArm = false;
+
 
     }
 
@@ -41,6 +47,15 @@ public class Potatohead {
     // STEP 3 OF 5: Add an accessor method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
+    /**
+    	void setArm(boolean _hasArm)
+     	mutator method for hasArm
+      	@param _hasArm changes the value of the boolean to true or false
+    */
+    public void setArm(boolean _hasArm){
+	    hasArm = _hasArm;
+    }
+	
     /**
     	void setNumOfEyes(int _numOfEyes)
     	mutator method for eyeNumber
@@ -76,7 +91,7 @@ public class Potatohead {
 	    hasGlasses = changeGlasses;
     }
 
-     /**
+    /**
 		  void setHasMouth(boolean _hasMouth)
   		mutator method for hasMouth
 		  @param _hasMouth changes the value of hasMouth to true or false 
@@ -96,6 +111,15 @@ public class Potatohead {
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
+    /**
+    	boolean hasArm()
+     	accesor method for hasArm variable
+        @return hasArm as a boolean for if the potatohead has arms
+    */	
+    public boolean hasArm(){
+	    return hasArm;
+    }
+	
     /**
     	String getNumOfEyes()
     	accessor method for eyeNumber
@@ -142,7 +166,7 @@ public class Potatohead {
 	    return hasMouth;
     }
 
-     /**
+    /**
     	Boolean hasHat()
     	accessor method for hasHat
     	@return hasHat as a boolean for if the potato is wearing a hat
@@ -150,6 +174,7 @@ public class Potatohead {
     public boolean hasHat() {
 	    return hasHat;
     }
+
 
     /**
     	String toString()
@@ -161,29 +186,29 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
-
         if (hasGlasses == true){
           output += "Is wearing glasses. ";
         }
-        if (hasGlasses == false){
+        else {
           output += "Isn't wearing glasses";
         }
-
+        if (hasArm == true){
+          output += "Has Arm";
+        }
+        else {
+          output += "Doesn't have arm";
+        }
         output += "Holding: " + rHandAccessory + " in right hand.";
-
-	if (hasMouth == true){
+	      if (hasMouth == true){
           output += "Has a mouth.";
         }
-	    
-        if (hasMouth == false){
+	      else {
           output += "Does not have a mouth.";
         }
-
-	if (hasHat == true){
+	      if (hasHat == true){
           output += "Has a hat.";
         }
-	    
-        if (hasHat == false){
+	      else {
           output += "Does not have a hat.";
         }
 
