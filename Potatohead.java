@@ -10,11 +10,21 @@ public class Potatohead {
 
     private boolean hasGlasses;
 
-    private String rHandAccessory
+    private String rHandAccessory;
 
     private boolean hasMouth;
 
     private int numOfFeet;
+
+    private boolean hasFeet;
+
+    private boolean hasHat;
+
+    private boolean hasArm;
+
+
+
+
 
     /*  the no argument constructor  */
     public Potatohead() {
@@ -29,8 +39,17 @@ public class Potatohead {
 
         rHandAccessory = "none";
         hasMouth = false;
+	
+	      hasFeet = false;
 
-	numOfFeet = 2;
+        hasHat = false;
+
+        hasArm = false;
+
+	      numOfFeet = 2;
+      
+      
+      
     }
 
 
@@ -40,23 +59,32 @@ public class Potatohead {
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
     /**
+    	void setArm(boolean _hasArm)
+     	mutator method for hasArm
+      	@param _hasArm changes the value of the boolean to true or false
+    */
+    public void setArm(boolean _hasArm){
+	    hasArm = _hasArm;
+    }
+	
+    /**
     	void setNumOfEyes(int _numOfEyes)
     	mutator method for eyeNumber
     	@param _numOfEyes for what the user desires.  
     */
     public void setNumOfEyes(int _numOfEyes) {
         eyeNumber = _numOfEyes;
-	    
     }
-     /** void setnumOfFeet(int _numOfFeet)
+  
+    /** void setnumOfFeet(int _numOfFeet)
      * sets the potatoheads feet.
      * parameters: 
      * @param _numOfFeet the number of feet the user must set
-     */
-    
+    */
     public void setNumOfFeet(int _numOfFeet) {
-	numOfFeet = _numOfFeet;
+	    numOfFeet = _numOfFeet;
     }
+  
     /** void setRightHandAccessory(String _accessory)
      * sets what the potatohead is holding in ITS right hand.
      * parameters: 
@@ -76,7 +104,7 @@ public class Potatohead {
     }
 	    
     /**
-		  void setGlasses(boolean changeGlasses)
+		  void setGlasses(boolean changeGlasses)    
   		mutator method for hasGlasses
 		  @param changeGlasses changes the value of the boolean to true or false 
   	*/
@@ -84,7 +112,7 @@ public class Potatohead {
 	    hasGlasses = changeGlasses;
     }
 
-     /**
+    /**
 		  void setHasMouth(boolean _hasMouth)
   		mutator method for hasMouth
 		  @param _hasMouth changes the value of hasMouth to true or false 
@@ -92,9 +120,40 @@ public class Potatohead {
     public void setHasMouth(boolean _hasMouth){
 	    hasMouth = _hasMouth;
     }
+
+
+    /**
+		  void setHasFeet(boolean _hasFeet)
+  		mutator method for hasFeet
+		  @param _hasFeet changes the value of hasMouth to true or false 
+  	*/
+    public void setHasFeet(boolean _hasFeet){
+	    hasFeet = _hasFeet;
+    }
+
+    /**
+		  void setHasHat(boolean _hasHat)
+  		mutator method for hasHat
+		  @param _hasHat changes the value of hasHat to true or false 
+  	*/
+    public void setHasHat(boolean _hasHat){
+	    hasHat = _hasHat;
+    }
+  
+  
+  
     // STEP 4 OF 5: a mutator method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
+    /**
+    	boolean hasArm()
+     	accesor method for hasArm variable
+        @return hasArm as a boolean for if the potatohead has arms
+    */	
+    public boolean hasArm(){
+	    return hasArm;
+    }
+	
     /**
     	String getNumOfEyes()
     	accessor method for eyeNumber
@@ -103,14 +162,14 @@ public class Potatohead {
     public int getNumOfEyes() {
         return eyeNumber;
     }
+  
     /** void getnumOfFeet(int _numOfFeet)
      * gets the potatoheads feet.
      * parameters: 
      * @return The Number Of Feet 
-     */
-    }
+    */
     public int getNumOfFeet() {
-	return numOfFeet;
+	    return numOfFeet;
     }
 	
     /**
@@ -151,6 +210,26 @@ public class Potatohead {
     }
 
 
+    /**
+    	Boolean hasFeet()
+    	accessor method for hasFeet
+    	@return hasFeet true if potatohead has feet and false if it does not
+    */
+    public boolean hasFeet() {
+	    return hasFeet;
+    }
+
+
+    /**
+    	Boolean hasHat()
+    	accessor method for hasHat
+    	@return hasHat as a boolean for if the potato is wearing a hat
+    */
+    public boolean hasHat() {
+	    return hasHat;
+    }
+
+
 
     /**
     	String toString()
@@ -162,32 +241,48 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
-
         if (hasGlasses == true){
           output += "Is wearing glasses. ";
         }
-        if (hasGlasses == false){
+        else {
           output += "Isn't wearing glasses";
         }
-
+        if (hasArm == true){
+          output += "Has Arm";
+        }
+        else {
+          output += "Doesn't have arm";
+        }
         output += "Holding: " + rHandAccessory + " in right hand.";
-
-	if (hasMouth == true){
+	      if (hasMouth == true){
           output += "Has a mouth.";
         }
-	    
-        if (hasMouth == false){
+	      else {
           output += "Does not have a mouth.";
         }
-	if (numOfFeet == 0){
-	  output += "Has No Feet."
-		  }
-	if (numOfFeet == 1){
-	  output += "Has A Foot."
-		  }
-	if (numOfFeet == 2){
-	  output += "Has Two Feet."
-		  }
+        if (numOfFeet == 0){
+          output += "Has No Feet."
+        }
+        if (numOfFeet == 1){
+          output += "Has A Foot."
+        }
+        if (numOfFeet == 2){
+          output += "Has Two Feet."
+        }
+	      if (hasHat == true){
+          output += "Has a hat.";
+        }
+	      else {
+          output += "Does not have a hat.";
+        }
+	      if (hasFeet == true){
+          output += "Has feet.";
+        }
+        else {
+          output += "Does not have any feet.";
+        }
+
+
 
 
         return output;
