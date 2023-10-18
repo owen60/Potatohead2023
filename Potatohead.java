@@ -10,9 +10,11 @@ public class Potatohead {
 
     private boolean hasGlasses;
 
-    private String rHandAccessory
+    private String rHandAccessory;
 
     private boolean hasMouth;
+
+    private boolean hasArm;
 
 
     /*  the no argument constructor  */
@@ -29,6 +31,8 @@ public class Potatohead {
         rHandAccessory = "none";
         hasMouth = false;
 
+	hasArm = false;
+
     }
 
 
@@ -37,6 +41,15 @@ public class Potatohead {
     // STEP 3 OF 5: Add an accessor method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
+    /**
+    	void setArm(boolean _hasArm)
+     	mutator method for hasArm
+      	@param _hasArm changes the value of the boolean to true or false
+    */
+    public void setArm(boolean _hasArm){
+	hasArm = _hasArm;
+    }
+	
     /**
     	void setNumOfEyes(int _numOfEyes)
     	mutator method for eyeNumber
@@ -84,6 +97,15 @@ public class Potatohead {
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
 
     /**
+    	boolean hasArm()
+     	accesor method for hasArm variable
+        @return hasArm as a boolean for if the potatohead has arms
+    */	
+    public boolean hasArm(){
+	return hasArm;
+    }
+	
+    /**
     	String getNumOfEyes()
     	accessor method for eyeNumber
     	@return eyeNumber an int describing the number of eyes.
@@ -129,8 +151,6 @@ public class Potatohead {
 	    return hasMouth;
     }
 
-
-
     /**
     	String toString()
     	returns a String description of the Potatohead
@@ -148,6 +168,13 @@ public class Potatohead {
         if (hasGlasses == false){
           output += "Isn't wearing glasses";
         }
+
+	if (hasArm == true){
+	  output += "Has Arm";
+	}
+	if (hasArm == false){
+	  output += "Doesn't have arm";
+	}
 
         output += "Holding: " + rHandAccessory + " in right hand.";
 
