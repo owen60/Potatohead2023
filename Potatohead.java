@@ -111,7 +111,11 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
-    
+     /**
+    	int getNumOfArms()
+    	accessor method for numOfArms
+    	@return numOfArms an int describing the number of arms.
+    */
     public int getNumOfArms() {
 	return numOfArms;
     }
