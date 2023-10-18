@@ -88,7 +88,7 @@ public class Potatohead {
         earNumber = _numOfEars;
     }
     /**
-		  void setGlasses(boolean changeGlasses)
+		  void setGlasses(boolean changeGlasses)    
   		mutator method for hasGlasses
 		  @param changeGlasses changes the value of the boolean to true or false 
   	*/
