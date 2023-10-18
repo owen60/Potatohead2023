@@ -14,11 +14,14 @@ public class Potatohead {
 
     private boolean hasMouth;
 
+    private int numOfFeet;
+
     private boolean hasFeet;
 
     private boolean hasHat;
 
     private boolean hasArm;
+
 
 
 
@@ -43,7 +46,10 @@ public class Potatohead {
 
         hasArm = false;
 
-
+	      numOfFeet = 2;
+      
+      
+      
     }
 
 
@@ -69,7 +75,16 @@ public class Potatohead {
     public void setNumOfEyes(int _numOfEyes) {
         eyeNumber = _numOfEyes;
     }
-	
+  
+    /** void setnumOfFeet(int _numOfFeet)
+     * sets the potatoheads feet.
+     * parameters: 
+     * @param _numOfFeet the number of feet the user must set
+    */
+    public void setNumOfFeet(int _numOfFeet) {
+	    numOfFeet = _numOfFeet;
+    }
+  
     /** void setRightHandAccessory(String _accessory)
      * sets what the potatohead is holding in ITS right hand.
      * parameters: 
@@ -87,6 +102,7 @@ public class Potatohead {
     public void setNumOfEars(int _numOfEars) {
         earNumber = _numOfEars;
     }
+	    
     /**
 		  void setGlasses(boolean changeGlasses)    
   		mutator method for hasGlasses
@@ -146,7 +162,16 @@ public class Potatohead {
     public int getNumOfEyes() {
         return eyeNumber;
     }
-    
+  
+    /** void getnumOfFeet(int _numOfFeet)
+     * gets the potatoheads feet.
+     * parameters: 
+     * @return The Number Of Feet 
+    */
+    public int getNumOfFeet() {
+	    return numOfFeet;
+    }
+	
     /**
     	String getNumOfEars()
     	accessor method for earNumber
@@ -235,19 +260,28 @@ public class Potatohead {
 	      else {
           output += "Does not have a mouth.";
         }
+        if (numOfFeet == 0){
+          output += "Has No Feet."
+        }
+        if (numOfFeet == 1){
+          output += "Has A Foot."
+        }
+        if (numOfFeet == 2){
+          output += "Has Two Feet."
+        }
 	      if (hasHat == true){
           output += "Has a hat.";
         }
 	      else {
           output += "Does not have a hat.";
         }
-
 	      if (hasFeet == true){
           output += "Has feet.";
         }
         else {
           output += "Does not have any feet.";
         }
+
 
 
 
